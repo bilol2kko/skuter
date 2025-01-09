@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #f5a623;
+    --secondary-color: #d98b1f;
+    --background-color: #e1e7ec;
+    --text-color: #333;
+    --light-text-color: #555;
+    --font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    background-color: var(--background-color);
+    background-image: url('placeholder-hero.jpg'); /* Hero bo‘limiga rasm qo‘yish */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--light-text-color);
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero .arrow {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background-color: var(--primary-color);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -60%) scale(1.1);
+    }
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background-color: var(--primary-color);
+    z-index: 0;
+}
+
+.step {
+    max-width: 300px;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.step img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: var(--light-text-color);
+}
